@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '545222842648300');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=545222842648300&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+</head>
+<body>
+<button onclick="event1()">event1</button>
+<button onclick="event2()">event2</button>
+<button onclick="event3()">event3</button>
+<script>
+  function event1(){
+    window.fbq('trackCustom', 'event1');
+    alert("埋点event1")
+  }
+  function event2(){
+    window.fbq('trackCustom', 'event2');
+    alert("埋点event2")
+  }
+  function event3(){
+    window.fbq('trackCustom', 'event3');
+    alert("埋点event3")
+  }
+</script>
+</body>
+</html>
